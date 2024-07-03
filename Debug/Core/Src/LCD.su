@@ -1,0 +1,8 @@
+../Core/Src/LCD.c:38:6:LCD_STROBE	8	static
+../Core/Src/LCD.c:49:6:lcd_write_cmd	24	static
+../Core/Src/LCD.c:69:6:lcd_write_data	24	static
+../Core/Src/LCD.c:89:6:lcd_clear	8	static
+../Core/Src/LCD.c:98:6:lcd_puts	16	static
+../Core/Src/LCD.c:109:6:lcd_putch	24	static
+../Core/Src/LCD.c:128:6:lcd_goto	24	static
+../Core/Src/LCD.c:140:6:lcd_init	8	static
