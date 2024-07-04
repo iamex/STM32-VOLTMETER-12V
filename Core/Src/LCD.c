@@ -1,10 +1,3 @@
-/*
- * LCD.c
- *
- *  Created on: Jun 10, 2023
- *      Author: Giacomo
- */
-
 #include "main.h"
 
 
@@ -50,15 +43,15 @@ void lcd_write_cmd(unsigned char c)
 {
 	unsigned int d;
 	d = c;
-	d = (d << 4) & 0x0F00;								// Extract upper nibble
-	GPIOA->ODR = d;										// Output to GPIOA
+	d = (d << 4) & 0x0F00;					// Extract upper nibble
+	GPIOA->ODR = d;						// Output to GPIOA
 	HAL_GPIO_WritePin(GPIOA,LCD_RS,GPIO_PIN_RESET);		// Clear RS
-	LCD_STROBE();										// Clock enable bit
+	LCD_STROBE();						// Clock enable bit
 	d = c;
-	d = (d << 8) & 0x0F00;								// Extract lower nibble
-	GPIOA->ODR = d;										// Output to GPIOA
+	d = (d << 8) & 0x0F00;					// Extract lower nibble
+	GPIOA->ODR = d;						// Output to GPIOA
 	HAL_GPIO_WritePin(GPIOA,LCD_RS,GPIO_PIN_RESET);		// Clear RS
-	LCD_STROBE();										// Clock enable bit
+	LCD_STROBE();						// Clock enable bit
 	HAL_Delay(0.1);
 }
 
@@ -71,13 +64,13 @@ void lcd_write_data(unsigned char c)
 	unsigned int d;
 
 	d = c;
-	d = (d << 4) & 0x0F00;								// Extract upper nibble
-	GPIOA->ODR = d;										// Output to GPIOA
+	d = (d << 4) & 0x0F00;					// Extract upper nibble
+	GPIOA->ODR = d;						// Output to GPIOA
 	HAL_GPIO_WritePin(GPIOA,LCD_RS,GPIO_PIN_SET);		// Set RS HIGH
-	LCD_STROBE();										// Clock enable bit
+	LCD_STROBE();						// Clock enable bit
 	d = c;
-	d = (d << 8) & 0x0F00;								// Extract lower nibble
-	GPIOA->ODR = d;										// Output to GPIOA
+	d = (d << 8) & 0x0F00;					// Extract lower nibble
+	GPIOA->ODR = d;						// Output to GPIOA
 	HAL_GPIO_WritePin(GPIOA,LCD_RS,GPIO_PIN_SET);		// Set RS HIGH
 	LCD_STROBE();
 }
