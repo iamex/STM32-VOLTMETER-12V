@@ -21,5 +21,5 @@ The STM32F303 can measure voltages higher than its 3.3V power supply thanks to a
 * Breadboard
 * jumper wires
 
- ## Possible upgrades
+ ### Possible upgrades
  * Add Wi-Fi or Bluetooth connectivity features
