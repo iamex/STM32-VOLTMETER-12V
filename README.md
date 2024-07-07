@@ -8,6 +8,8 @@ In the STM32CubeMX configuration:
 * Pins PA6 to PA11 are configured as digital outputs and are used to interface with the LCD.
 * Pins PA2 and PA3 are configured for USART communication.
 * Pin PC2 is configured as an ADC input for voltage measurement.
+  ![image](https://github.com/iamex/STM32-VOLTMETER-12V/assets/26520401/a730f8a7-fdd7-430a-aec6-4d7c6b18f034)
+
 
 The STM32F303 can measure voltages higher than its 3.3V power supply thanks to a voltage divider circuit composed of two resistors: R1 = 7 kΩ and R2 = 3.27 kΩ. The voltage to be measured is applied across the two resistors, while the ADC pin (PC2) is connected between R1 and R2. The voltage data retrieved from PC2 is displayed on an LCD in millivolts, updating every second.
 
