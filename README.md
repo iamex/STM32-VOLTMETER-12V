@@ -14,6 +14,8 @@ In the STM32CubeMX configuration:
 The STM32F303 can measure voltages higher than its 3.3V power supply thanks to a voltage divider circuit composed of two resistors: R1 = 7 kΩ and R2 = 3.27 kΩ. The voltage to be measured is applied across the two resistors, while the ADC pin (PC2) is connected between R1 and R2. The voltage data retrieved from PC2 is displayed on an LCD in millivolts, updating every second.
 
 ## Circuit diagram
+![image](https://github.com/iamex/STM32-VOLTMETER-12V/assets/26520401/96c825fe-1310-4d6b-94f5-70f03b91fed0)
+
 
 ## Component used
 * STM32303RET6 Nucleo-64 board
